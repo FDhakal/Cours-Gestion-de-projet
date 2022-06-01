@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Gestion de projet</title>
+
+    <link rel="stylesheet" href="../dist/reset.css" />
+    <link rel="stylesheet" href="../dist/reveal.css" />
+    <link rel="stylesheet" href="../dist/theme/night.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../dist/custom.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 style="font-size: 5vw">Les fondamentaux du cycle d'un projet</h1>
+        </section>
+
+        <section>
+          <h2>Introduction</h2>
+          <p>
+            Quand on se lance dans un projet un minimum ambitieux, on parle tout
+            de suite “<strong>gestion de projets</strong>”. C’est un grand mot
+            pour désigner quelque chose que nous faisons déjà dans la vie de
+            tous les jours : organiser des tâches et prévoir une date de fin.
+          </p>
+          <p>
+            Alors, vous avez peut-être déjà organisé des vacances avec des amis
+            et vous savez peut-être que
+            <strong> le choix de la méthode importe beaucoup</strong>. Est-ce
+            qu’on prévoit tout en détail en avance ? Est-ce qu’on se laisse
+            surprendre par l’inconnu ou, au contraire, va-t-on dans un "All
+            included" ?
+          </p>
+        </section>
+        <section>
+          <img src="../dist/img/14810289671602_gestion-projets-1.png" />
+        </section>
+        <section>
+          <blockquote>
+            La gestion de projets informatique est assez semblable sauf qu’on va
+            plutôt parler de méthodes séquentielles, avec lesquelles on prévoit
+            tout tout depuis le début, ou de méthodes agiles, qui laissent le
+            champ libre aux changements.
+          </blockquote>
+        </section>
+        <section>
+          <h3>Partie 1 : Le cahier des charges</h3>
+          <p>
+            Un cahier des charges est un document qui explique les besoins et
+            les attentes du client. Ce dernier le rédige et l’envoie à la
+            personne qui réalisera le projet : prestataire externe, agence ou
+            développeur en interne. Le plus souvent, le prestataire externe
+            questionne le client sur le cahier des charges pour être sûr d’avoir
+            bien compris les attentes de son client. Le cahier des charges peut
+            être modifié en conséquence afin d’y indiquer le budget, les
+            contraintes éventuelles et les deadlines.
+          </p>
+          <p>
+            Quand les deux parties sont d’accord sur le contenu, elles signent
+            un contrat qui se base sur le cahier des charges. C’est pourquoi un
+            cahier des charges est dit contractuel. Le client peut se retourner
+            contre le prestataire si ce dernier n’a pas réalisé ses engagements.
+            À l’inverse, le prestataire peut poursuivre le client s’il ne
+            respecte pas les conditions de paiement.
+          </p>
+        </section>
+        <section>
+          <p>
+            Les plus grands projets font l’objet d’un cahier des charges très
+            détaillé et approfondi, notamment lorsqu’il s’agit d’une entreprise
+            publique qui est soumise aux appels d’offres. Dans le cahier des
+            charges d’un grand projet, nous retrouvons en général ces quatre
+            parties :
+          </p>
+          <ul>
+            <li>
+              <strong>Contexte</strong>. Génèse du projet, objectifs,
+              responsables. Procédures de validation, etc.
+            </li>
+            <li>
+              <strong
+                >Besoins fonctionnels, techniques et organisationnels</strong
+              >, ainsi que les contraintes.
+            </li>
+            <li><strong>Prestations</strong> et livrables attendus.</li>
+            <li>
+              <strong>Contexte de la réponse</strong>. Planning de l’appel
+              d’offres, règles de sélection, etc. C’est surtout important dans
+              le cadre d’un appel d’offres.
+            </li>
+          </ul>
+          <p>
+            Le cahier des charges peut également inclure les spécifications
+            fonctionnelles et techniques. Cela dépend des projets !
+          </p>
+        </section>
+        <section>
+          <h4>Pourquoi planifier un projet ?</h4>
+          <ul>
+            <li>
+              <strong>Communication</strong>. Avant tout, car cela vous permet
+              d’aller dans le détail du programme demandé. Avant de planifier,
+              il faut en effet aller plus loin que le cahier des charges et
+              approfondir les fonctionnalités. Nous allons donc engager un
+              dialogue avec le client en amont afin de valider avec lui que nous
+              allons bien réaliser ce qu’il souhaite. Vous vous rendrez vite
+              compte que cela vous fera gagner du temps.
+            </li>
+            <li>
+              <strong>Sérénité</strong>. Que vous travailliez seul ou en équipe,
+              planifier un projet vous aide également à vous concentrer sur
+              l’essentiel pendant la phase de production. Vous n’avez pas envie
+              de vous demander tous les matins : “que manque-t-il à mon
+              programme ?”
+            </li>
+            <li>
+              <strong>Qualité</strong>. Enfin, vos développeurs produiront du
+              code de meilleure qualité car leur coordination sera facilitée.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Un projet informatique est développé conjointement par deux équipes
+            : la maîtrise d’ouvrage et la maîtrise d’oeuvre.
+          </p>
+          <ul>
+            <li>
+              La maîtrise d’ouvrage (MOA) est le client ou le représentant des
+              utilisateurs. Si nous faisons un parallèle avec une maison, ce
+              serait la personne qui passe commande. « Je veux une maison jaune
+              avec un toit rouge».
+            </li>
+            <li>
+              La maîtrise d’œuvre (MOE) sera l’équipe chargée de réaliser la
+              vision de la maîtrise d’ouvrage. Face à la demande précédente,
+              elle répondra certainement « Nous utiliserons de la brique et une
+              dalle en béton. La peinture sera sans plomb ».
+            </li>
+          </ul>
+          <p>
+            Il arrive parfois que le client ne soit pas formé en gestion de
+            projet et qu’il fasse appel à des prestataires dont c’est le métier.
+            Nous parlons alors d’assistance à maîtrise d’ouvrage (AMOA).
+          </p>
+        </section>
+        <section>
+          <h4>1ère étape : définition du projet</h4>
+          <p>
+            La maîtrise d’ouvrage écrit les
+            <strong>spécifications fonctionnelles</strong> (“requirements” en
+            anglais). Il s’agit d’un (long) document détaillant point par point
+            tous les comportements de l’application. Nous pouvons le voir comme
+            le cadastre du projet : développeurs, chefs de projet, rédacteurs,
+            bref, tout le monde y aura recours en cas de doute.
+          </p>
+          <h4>2ème étape : conception de l'architecture</h4>
+          <p>
+            Une fois que les spécifications fonctionnelles sont écrites, la
+            maîtrise d’oeuvre écrit les
+            <strong>spécifications techniques</strong> et conçoit l’architecture
+            globale de l’application.
+          </p>
+          <p>
+            À la différence des spécifications fonctionnelles, qui se
+            concentrent sur l’utilisation de l’application, les spécifications
+            techniques ont pour objectif de définir le
+            <strong>cadre technique du projet</strong>. Plus ou moins poussées,
+            elles seront une base de travail solide pour les
+            <strong>développeurs</strong>.
+          </p>
+          <p>
+            En parallèle, le chef de projet technique conçoit l’architecture en
+            s’aidant de diagrammes UML. Une validation est réalisée par le
+            client et le chef de projet
+          </p>
+        </section>
+        <section>
+          <h4>3ème étape: l'écriture du code</h4>
+          <p>
+            C’est au tour des développeurs d’entrer sur la scène ! Ils se basent
+            sur les spécifications et sur le diagramme pour produire le code
+            demandé.
+          </p>
+          <h4>4ème étape : la recette</h4>
+          <p>
+            La dernière phase a pour objectif de vérifier que l’<strong
+              >application fonctionne comme il se doit</strong
+            >. Des tests manuels peuvent être effectués mais, en règle générale,
+            nous préférons utiliser les pouvoirs de l’informatique pour
+            automatiser au maximum ces vérifications. Nous utilisons notamment
+            des tests unitaires.
+          </p>
+        </section>
+        <section>
+          <p class="info">
+            <i class="fa-solid fa-circle-info blanc"></i>
+            Qu'est-ce qu'un test unitaire ?
+          </p>
+          <p>
+            Chaque test unitaire a pour but de vérifier qu’une partie de
+            l’application produit bien le résultat attendu quand un certain
+            événement a lieu. Nous pouvons vérifier, par exemple, que le
+            formulaire n’est pas envoyé si l’utilisateur n’a pas renseigné son
+            prénom. Automatiser les tests fait gagner beaucoup de temps !
+          </p>
+          <p>
+            Puis le maître d’ouvrage réalise des
+            <strong>tests de recette</strong>, c’est-à-dire qu’il va tester
+            manuellement que l’application correspond à ce qui a été demandé.
+          </p>
+          <p>
+            Une méthodologie de projet séquentielle permet de réaliser ces
+            phases <span>les unes après les autres</span> dans un
+            <span>ordre chronologique</span>. L’objectif de chaque phase est
+            avant tout un document à remettre, plus que des fonctionnalités. Le
+            logiciel n’est testé qu’à la fin et le client commence à voir les
+            résultats du travail de préparation parfois plusieurs mois après le
+            démarrage du projet.
+          </p>
+        </section>
+        <section>
+          <p>Suivre cette approche séquentielle à la lettre signifie avoir :</p>
+          <ul>
+            <li>
+              100% des spécifications fonctionnelles avant de commencer la
+              conception,
+            </li>
+            <li>
+              100% des spécifications techniques avant de commencer le code,
+            </li>
+            <li>100% du code avant de commencer les tests.</li>
+          </ul>
+          <p>
+            Pas évident, dans ce cas, de modifier des éléments en cours de route
+            ! C’est un modèle idéal mais <strong>irréaliste</strong>. Dans la
+            réalité, on revient souvent aux phases précédentes, notamment
+            pendant la phase de test qui implique de réécrire du code pour
+            corriger des défauts, donc de retravailler la conception et par
+            conséquent de modifier les spécifications fonctionnelles.
+          </p>
+          <p class="info">
+            Que faire, mais que faire ? Est-on condamné à cette approche ?
+          </p>
+          <p>
+            Non, bien entendu, mais vous vous en doutiez. Les méthodologies de
+            projet agiles sont justement apparues pour résoudre ces problèmes.
+          </p>
+        </section>
+        <section>
+          <h3>Les méthodes dites agiles</h3>
+          <p class="info">
+            Les méthodes agiles ont commencé leur apparition dans les usines
+            Toyota, dans les années 50, à travers le
+            <a
+              href="https://smecatec.fr/lean-production-definition-et-utilites-smecatec/"
+              target="_blank"
+              >Lean Software</a
+            >
+            (d’où vient le
+            <a href="https://www.atlassian.com/fr/agile/kanban" target="_blank"
+              >Kanban</a
+            >, ce n'est pas tout neuf.
+          </p>
+          <p>
+            Scott Ambler, dans
+            <a href="http://agilemodeling.com/" target="_blank"
+              >agilemodeling.com</a
+            >, propose la définition suivante :
+          </p>
+          <blockquote>
+            Une méthode agile est une approche itérative et incrémentale pour le
+            développement de logiciel, réalisé de manière très collaborative par
+            des équipes responsabilisées appliquant un cérémonial minimal qui
+            produisent, dans un délai contraint, un logiciel de grande qualité
+            répondant aux besoins changeants des utilisateurs.
+          </blockquote>
+        </section>
+        <section>
+          <h3>Une approche itérative, incrémentale et adaptative</h3>
+		  <h4>Itératif</h4>
+          <p>
+            L’itération est le principe de
+            <strong
+              >répéter un processus plusieurs fois dans le but d’améliorer un
+              résultat</strong
+            >.
+          </p>
+          <p>
+            Dans le monde du développement, nous utilisons cette approche pour
+            <strong>améliorer une fonctionnalité</strong>. Nous sommes
+            pragmatiques et nous savons bien que rien n’est parfait la première
+            fois. Une fonctionnalité a besoin d’être testée dans des conditions
+            réelles pour s’adapter à ses utilisateurs et pour révéler des bugs
+            éventuels.
+          </p>
+		  
+			<h4>Incrémental</h4>
+          <p>
+            Un processus incrémental permet de
+            <strong>construire un produit petit à petit</strong> en le découpant
+            en pièces détachées. Elles sont le plus souvent indépendantes les
+            unes des autres mais ont pour caractéristiques d’améliorer le
+            produit.
+          </p>
+        </section>
+        <section>
+          <p>
+            Prenons l’exemple d'un vélo. À quoi sert-il ? À se déplacer. Nous
+            pouvons par conséquent découper la conception du vélo en plusieurs
+            sous-produits :
+          </p>
+          <ul>
+            <li>
+              Un <strong>monocycle</strong>. L’utilisateur se déplace mais n’a
+              pas une grande maîtrise de la direction.
+            </li>
+            <li>
+              Un <strong>monocycle avec une roue avant</strong>. L’utilisateur a
+              une meilleure maîtrise de la direction mais l’objet est encombrant
+              et peu maniable.
+            </li>
+            <li>
+              Un <strong>vélo avec guidon</strong>. L’utilisateur maîtrise la
+              direction et l’objet est plus compact mais il est plus difficile
+              de s’arrêter car nous sommes penchés en avant.
+            </li>
+            <li>
+              Un <strong>vélo avec des freins</strong>. L’utilisateur se déplace
+              avec aisance et peut s’arrêter en cas de danger. Objectif atteint
+              !
+            </li>
+          </ul>
+          <p>
+            Adaptée à l’informatique, cette approche incrémentale incite les
+            responsables de produit à se concentrer sur les
+            <strong>fonctionnalités essentielles</strong> et les développeurs à
+            <strong>mettre en production régulièrement</strong>.
+          </p>
+        </section>
+		<section>
+			<h4>Adaptatif</h4>
+			<p>Adaptatif
+				Suivre une approche incrémentale et itérative suppose une grande communication avec ses utilisateurs et une certaine humilité. 
+				Votre produit sera d’abord très minimaliste et s’améliorera en fonction des retours. 
+				Puis vous ajouterez de nouvelles fonctionnalités qui, à chaque étape, feront l’objet de modifications.</p>
+				<p>
+					Une méthode incrémentale et itérative mettra en œuvre les quatre phases vues plus haut (définition, conception, code et test) <strong>pour chaque incrément</strong>, donc pour chaque nouvelle fonctionnalité. 
+					Le responsable du produit communiquera alors avec les utilisateurs pour connaître les modifications éventuelles à apporter lors d’une itération ultérieure.
+				</p>
+				<p>
+					Les intérêts sont multiples. Outre le fait que vous communiquez régulièrement avec vos utilisateurs, vous avez un réel <strong>sentiment de satisfaction</strong>. 
+					Votre produit s’améliore au jour le jour, concrètement, et vous avez l’impression de passer moins de temps à écrire de la paperasse.
+				</p>
+		</section>
+		<section>
+			<h3>Un cérémonial</h3>
+			<p>
+				L’accent est mis <strong>sur le produit</strong> avant tout et non sur les réunions : un produit bancal qui a pourtant des spécifications parfaites n’en restera pas moins un produit inutilisable.
+			</p>
+			<p>
+				Produire des fonctionnalités, oui, mais de bonne qualité. C’est pourquoi les méthodes agiles insistent sur la <strong>collaboration</strong> entre les différentes parties prenantes du projet. 
+				Les réunions sont conservées mais tout est mis en œuvre pour qu’elles soient le plus efficaces possible. 
+				De même, la collaboration entre développeurs est grandement recommandée à travers de la programmation en binôme par exemple (“<i>pair programming</i>” en anglais).
+			</p>
+		</section>
+		<section>
+			<h3>Le besoin des utilisateurs évolue</h3>
+			<p>
+				Ceci est peut-être le point le plus révolutionnaire : le projet est complètement centré sur l’utilisateur ! 
+				L’objectif n’est plus de produire des documents qui aideront le projet à avancer mais bien de produire les fonctionnalités que l’utilisateur attend au plus vite et le plus qualitativement possible. 
+				L’utilisateur évolue et notre service doit refléter ses usages.
+			</p>
+			<p class="warning">
+				<i class="fa-solid fa-circle-exclamation"></i>
+				Attention, cela ne veut pas dire qu’une équipe agile dira oui à tout le monde et implémentera toutes les fonctionnalités ! 
+				Mais il lui sera plus facile d’intégrer des changements et de modifier l’ordre de priorité des tâches que dans une équipe qui suit une approche séquentielle.
+			</p>
+		</section>
+		<section>
+			<h3>Définisssons le projet</h3>
+			<p>Nous avons vu qu’une approche séquentielle supposait produire en amont tous les documents nécessaires au développement d’un projet. 
+				Pour rappel, voici les différentes phases suivies :</p>
+				<ul>
+					<li><strong>Définition du projet</strong> : production des spécifications fonctionnelles</li>
+					<li><strong>Conception de l’architecture</strong> : production des spécifications techniques</li>
+					<li><strong>Codage</strong> : création du produit demandé</li>
+					<li><strong>Recette</strong> : tests (automatiques et manuels)</li>
+				</ul>
+				<p>
+					Une spécification fonctionnelle décrit la manière dont un produit fonctionnera, entièrement du point de vue de l’utilisateur. 
+					Ici nous ne parlons pas de technique mais bien de <strong>fonctionnalités</strong>. 
+					Quel menu ? Quel écran s’affiche lorsque notre utilisateur entre tel ou tel nom dans le champ de recherche ?
+				</p>
+		</section>
+		<section>
+			<h4>Contenu</h4>
+			<p>Au même titre qu’un cahier des charges, le contenu des spécifications fonctionnelles dépend en grande partie de l’auteur.</p>
+			<p>Néanmoins, toute spécification fonctionnelle devrait contenir les champs suivants :</p>
+			<ul>
+				<li>
+					Un <strong>auteur</strong> (de préférence unique, le chef de projet de la maîtrise d’ouvrage)
+				</li>
+				<li>
+					Des <strong> scénarios utilisateurs</strong>
+				</li>
+				<li>
+					Un <strong>aperçu</strong> sous forme de diagramme
+				</li>
+				<li>
+					Des <strong>détails</strong> concernant chaque scénario utilisateur.
+				</li>
+			</ul>
+		</section>
+		<section>
+			<p class="info">
+				Pour Joël Spolsky, le fondateur de Trello et de StackOverFlow (entre autres), les spécifications fonctionnelles sont avant tout un outil d’<strong>aide à la décision</strong>. 
+				Elles doivent décrire tous les scénarios utilisateurs (que se passe-t-il si l’utilisateur oublie son mot de passe ? Ou si la recherche ne donne aucun résultat ?) afin d’aider le plus possible les développeurs. 
+				Ces derniers ne devraient pas se poser de questions sur les fonctionnalités mais <strong>se concentrer sur les problématiques techniques</strong>. 
+				Cela les aide à être plus performants et allège les aller-retours avec le client.
+			</p>
+		</section>
+		<section>
+			<p>
+				C’est pourquoi Joël ajoute quelques éléments à ses spécifications fonctionnelles :
+			</p>
+			<ul>
+				<li>
+					Une <strong>décharge</strong> disant que ce n’est pas la version finale de la spec, qu’elle évoluera. 
+					En effet, il préconise une évolution constante du document qui suit l’avancée du projet. 
+					Il s’agit d’un parti pris qui peut être très intéressant dans le cadre de projets impliquant peu d’intervenants (une dizaine de développeurs).
+				</li>
+				<li>
+					Des <strong>non-buts</strong> : non, nous n’allons pas développer cette fonctionnalité. Cela permet de prévenir, en amont, certaines questions.
+				</li>
+				<li>
+					Des <strong>questions en suspens</strong> : les spécifications étant vues par Joël comme un outil d’aide à la décision, il est important d’y inclure les points restés sans réponse ou à tester.
+				</li>
+				<li>
+					Des <strong>annotations pour certaines équipes</strong> : elles seront lues par certaines personnes et ignorées par d’autres. 
+					Cela permet de centraliser les questions éventuelles. Par exemple, certaines notes concerneront les rédacteurs de la documentation ou les développeurs.
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Conseils de rédaction</h3>
+			<h4>Adaptez-vous à l'audience</h4>
+			<p>
+				Cela peut paraître évident mais vous ne rédigerez pas les mêmes spécifications si votre équipe est composée de 40 développeurs travaillant pour le ministère des finances que si vous officiez chez Google. 
+				Ils auront d’ailleurs très certainement un premier document de travail sur lequel vous pourrez vous appuyer.
+			</p>
+			<h4>Sortez de l'ordinaire</h4>
+			<p>
+				Dans la mesure du raisonnable et en fonction de votre audience, écrivez des specs <strong>agréables à lire</strong>. 
+				En effet, un des grands arguments à l’encontre des specs est que personne ne veut les lire et que, par conséquent, elles ne servent à rien. 
+				Mais imaginez si en place et lieu de “l’utilisateur X” vous parlez de Jean-Michel Aléatoire, éleveur de fûrets dans l'Aveyron ? 
+				Cela donne tout de suite plus envie de se plonger dans un document de 100 pages, n’est-ce pas ?
+			</p>
+		</section>
+		<section>
+			<h3>Soyez flexible et incluez vos collaborateurs</h3>
+			<p>Dans la mesure du possible, soyez conscient que vos spécifications peuvent évoluer en fonction des retours de votre client et des équipes techniques. 
+				Incluez vos collaborateurs pendant le processus de rédaction en leur demandant leur avis et en prenant en compte leurs retours éventuels. 
+				Cela les impliquera dans le projet et les motivera pour la suite, tout en vous aidant à améliorer de manière significative vos spécifications.</p>
+		</section>
+		<section>
+			Quand les spécifications fonctionnelles sont rédigées et validées par le client, il est temps de créer les spécifications techniques et de concevoir l’architecture !
+		</section>
+      </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

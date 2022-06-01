@@ -1,0 +1,39 @@
+.reveal h3 {
+    font-size:3vw;
+}
+
+.reveal h4 {
+    font-size:2.3vw;
+}
+
+.reveal p {
+    text-align: justify;
+    font-size:2vw;
+}
+
+.reveal strong {
+    color:#d08a1d;
+}
+
+.reveal ul li {
+    font-size:2vw;
+}
+
+.reveal .info  {
+    background:rgb(104, 104, 206);
+    padding:1em;
+}
+
+.blanc {
+    color:white;
+}
+
+.reveal blockquote {
+    text-align: justify;
+    font-size:2vw;
+}
+
+.reveal .warning  {
+    background:rgb(172, 103, 0);
+    padding:1em;
+}

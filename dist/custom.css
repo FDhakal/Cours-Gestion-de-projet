@@ -15,7 +15,7 @@
     color:#d08a1d;
 }
 
-.reveal ul li {
+.reveal ul li, .reveal ol li {
     font-size:2vw;
 }
 
@@ -36,4 +36,12 @@
 .reveal .warning  {
     background:rgb(172, 103, 0);
     padding:1em;
+}
+
+.reveal .fixThis li, .reveal .fixThis li p {
+    font-size:1.8vw
+}
+
+.reveal .hackThis li {
+    list-style: none;
 }

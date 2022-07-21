@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Gestion de projet</title>
+
+    <link rel="stylesheet" href="../dist/reset.css" />
+    <link rel="stylesheet" href="../dist/reveal.css" />
+    <link rel="stylesheet" href="../dist/theme/night.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../dist/custom.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 style="font-size: 5vw">Représenter une structure en UML</h1>
+        </section>
+
+        <section>
+          <h2>Dialoguez avec les développeurs grâce à l’UML</h2>
+          <strong>Dialoguez grâce au diagramme de classe</strong>
+          <p>Déjà entendu parler de POO ? La programmation orientée objet ?</p>
+          <p>
+            Dans un langage de programmation orientée objet, le développeur
+            définit des objets. Un objet, c’est un concept, une idée ou une
+            chose du monde réel. Chaque objet possède des attributs (ce sont ses
+            caractéristiques) ainsi qu’un ensemble de comportements possibles.
+          </p>
+        </section>
+        <section>
+          <p>
+            Le diagramme de classes UML est aussi utilisé par les développeurs
+            qui codent avec des programmes orientés objet : Python, PHP, C++,
+            Java, etc
+          </p>
+          <p>
+            L'utilisation du diagramme de classes UML pour la modélisation de la
+            base de données s'est généralisée avec la croissance de la
+            programmation objet.
+          </p>
+          <p>
+            Étant donné qu'une base de données fonctionne quasiment toujours en
+            dialogue avec un programme informatique, il y a des échanges
+            d'informations entre les deux. Si des deux côtés, les concepts
+            manipulés sont les mêmes, alors c'est bien plus simple pour
+            communiquer entre ceux qui s'occupent de la BDD et ceux qui codent
+            le programme. On comprend donc pourquoi le diagramme de classes UML
+            est utilisé des deux côtés de la barrière (côté base de données et
+            côté applicatif).
+          </p>
+        </section>
+        <section>
+          <p>
+            Certains langages orientés objet proposent même des fonctionnalités
+            (on appelle cela des librairies) qui permettent de créer
+            automatiquement la structure de la base de données relationnelle à
+            partir du code informatique écrit en ce langage !
+          </p>
+        </section>
+        <section>
+          <h3>Associez vos classes pour garder du lien dans vos données</h3>
+          <strong> Constituez vos associations </strong>
+          <p>
+            Pour créer vos associations, je vous propose de
+            <strong>tracer des traits</strong> qui relient vos classes, et de
+            leur donner un nom, de préférence un <strong>verbe</strong> tel que
+            « réalise », « produit », etc.
+          </p>
+        </section>
+        <section>
+          <img src="../dist/img/16343245041689_image61.png" />
+        </section>
+        <section>
+          <strong>Définissez les multiplicités de vos associations</strong>
+          <p>
+            Il y a un concept très important quand on définit une association :
+            c’est la notion de <strong>multiplicité</strong>.
+          </p>
+          <p>
+            Elle permet de dire si un film peut être réalisé par UN SEUL ou par
+            PLUSIEURS réalisateurs, et inversement : si un réalisateur peut
+            produire UN SEUL ou PLUSIEURS films.
+          </p>
+        </section>
+        <section>
+          <p class="warning">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            Il ne faut pas négliger les multiplicités, car ceci aura des
+            implications dans le SGBDR. Par exemple, si vous considérez à tort
+            qu’un réalisateur ne peut réaliser qu’un seul film, alors la
+            structure de votre BDD ne sera pas faite pour accueillir plus d’un
+            film par réalisateur : et pour modifier cette structure, ce sera un
+            peu plus complexe qu’on ne le pense.
+          </p>
+        </section>
+        <section>
+          <p>Il existe 3 types d'associations</p>
+          <ul>
+            <li>
+              <strong>Plusieurs à plusieurs</strong> (many-to-many) : un film
+              peut être réalisé par <strong>plusieurs</strong> réalisateurs, et
+              un réalisateur peut avoir réalisé <strong>plusieurs</strong> films
+            </li>
+            <li>
+              <strong>Un à plusieurs</strong> (one-to-many) ou plusieurs à un
+              (many-to-one) : un film n’est réalisé que par
+              <strong>au plus 1</strong> société de production, et une société
+              peut produire <strong>plusieurs</strong> films ;
+            </li>
+            <li>
+              <strong>Un à un</strong> (one-to-one) : vous n’avez pas ce cas
+              dans vos données, mais c’est lorsqu’une instance d’une classe A ne
+              peut être associée qu’à <strong>au plus 1</strong> instance d’une
+              classe B. Et qu’une instance de B ne peut être associée qu’à
+              <strong>au plus 1</strong> instance de A. Par exemple, un cinéma
+              n’a qu’une seule adresse, et une adresse donnée ne peut accueillir
+              qu’un seul cinéma.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Ensuite, vous pouvez aller plus loin dans la précision des
+            multiplicités.<br /><br>
+
+            Par exemple, quand vous dites « au plus 1 », vous pouvez préciser
+            s’il s’agit de « strictement 1 », ou bien « 0 ou 1 ». Aussi, quand
+            vous dites « plusieurs », vous pouvez entendre « 0, 1 ou plus », ou
+            bien « strictement plus que 1 », etc.
+            <br /><br>
+            Voici comment noter cela :
+          </p>
+        </section>
+        <section>
+            <img src="../dist/img/multiplicite.jpg" />            
+        </section>
+        <section>
+            <p>Voici comment s'utilisent ces notations:</p>
+            <ul>
+                <li>
+                    Un film peut être réalisé par <strong>au moins 1</strong> réalisateur (noté   1..*  ) , et un réalisateur peut avoir produit <strong>0, 1 ou plusieurs</strong> (noté   *  ) films :
+                </li>
+            </ul>
+            <img src="../dist/img/16363656794249_Sans titre-1.png" />  
+        </section>
+        <section>
+            <ul>
+                <li>
+                    Un film est réalisé par <strong>exactement 1</strong> société de production (   1  ), et une société peut produire <strong>0, 1 ou plusieurs</strong> films (   *  ) :
+                </li>
+            </ul>
+            <img src="../dist/img/16363656908113_Sans titre-2.png" />  
+        </section>
+        <section>
+            <ul>
+                <li>
+                    Un cinéma a <strong>exactement 1</strong> adresse (   1  ), et une adresse donnée ne peut accueillir que <strong>0 ou 1 seul</strong> cinéma (   0..1  ) :
+                </li>
+            </ul>
+            <img src="../dist/img/1634356527079_image32.png" />  
+        </section>
+        <section>
+            <p class="info">
+                <i class="fa-solid fa-circle-info blanc"></i>
+                Les termes <strong>multiplicité et cardinalité</strong> sont souvent confondus. Mais officiellement, une multiplicité désigne <strong>l’ensemble</strong> des cardinalités <strong>possibles</strong> entre deux instances. 
+                
+                <br><br>Par exemple, on dira qu’une société de production peut produire 0, 1 ou plusieurs films. Cela correspond à une multiplicité de 0..*.</p>
+            </p>
+            </section>
+            <section>
+                <strong>Caractérisez vos associations grâce aux classes d’association</strong>
+                <p>sachez qu’il est possible de donner des caractéristiques à un lien, grâce à une <strong>classe d’association</strong>. Ici, comme l’association s’appelle « est tourné », vous pouvez appeler votre classe « Tournage » :</p>
+                <img src="../dist/img/16343573486978_image68.png">
+            </section>
+            <section>
+                <strong>Renforcez vos associations grâce à la composition</strong>
+                <p>
+                    Il existe un type d’association particulier, appelé l’association de <strong>composition</strong>. Celle-ci s’utilise quand une classe est un composant d’une autre classe.
+                </p>
+                <p>Prenez l’exemple d’un circuit électronique : il est composé de composants électroniques : diodes, condensateurs, microprocesseurs, etc. Ainsi, on peut avoir une association de composition entre une classe <i>CircuitElectronique</i> et une classe <i>ComposantElectronique</i>.</p>
+                <p>Imaginez que votre circuit soit défaillant et que vous deviez donc le jeter. Dans ce cas, vous jetez automatiquement tous ses composants. C’est là la particularité de la composition : le <strong>composant</strong> (une diode, par exemple) ne peut exister que via son <strong>composite</strong> (circuit électronique).</p>
+            </section>
+            <section>
+                <p>Pour votre appli, vous pourriez considérer qu’un tournage est un composant du film. En effet, rien ne sert d’enregistrer dans votre BDD un tournage si vous ne savez pas à quel film il est associé.</p>
+                <p>On peut aussi avoir une composition entre Film et SocieteDeProduction. En effet, un film ne peut exister si une société ne l'a pas produit. De plus, il existe parfois des films différents ayant le même nom (exemple : au moins quatre films portent le titre Home). Ainsi, pour identifier un film de manière certaine, on a besoin de son titre mais aussi du nom de sa société de production, ce qui prouve le lien de dépendance entre ces deux classes.</p>
+            </section>
+            <section>
+                <p>Voici comment cette composition aurait été représentée : avec un losange noir (plein) du côté du composite :</p>
+                <img src="../dist/img/16343577199231_image25.png">
+            </section>
+            <section>
+                <p>La composition s’emploie quand ces trois caractéristiques sont réunies :</p>
+                <ol>
+                    <li>Le composite est « composé » de composants.</li>
+                    <li>L’association de composition est de type <strong>un-à-plusieurs</strong>, car le composite peut avoir plusieurs composants (0..1, 1, *ou1..*), et le composant appartient à un et un seul composite (la multiplicité est donc forcément1, rien d’autre) : on dit que le composite n’est <strong>pas partageable</strong>.</li>
+                    <li>Il y a un lien entre le cycle de vie du composite et du composant : un composant disparaît dès que l'objet composite auquel il appartient est supprimé.</li>
+                </ol>
+                <p class="warning">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    La composition est un cas particulier d’<strong>association un-à-plusieurs</strong>. 
+                </p>
+            </section>
+            <section>
+                <p>Voici la dernière mouture de notre modélisation UML</p>
+                <img src="../dist/img/16538962604707_Capture d’écran 2022-05-30 à 09.37.01.png">
+            </section>
+            <section>
+                <strong>Généralisez et spécialisez vos classes</strong>
+                <p>Jusqu’à maintenant, nous avons parlé de films de manière générale. Mais nos données sont un peu plus précises que cela. En effet, ce que nous avons appelé « film » peut en réalité être un <strong>long-métrage</strong>, un <strong>téléfilm</strong> ou une <strong>série</strong> (diffusée sur le web ou à la télévision). Pour être plus correct, nous allons maintenant employer le terme « Oeuvre » au lieu de « Film ». Une œuvre sera donc soit un long-métrage, soit un téléfilm, ou une série.</p>
+                <p class="info">
+                    <i class="fa-solid fa-circle-info blanc"></i>
+                    Un long-métrage est un film tel que nous l’entendons habituellement, un téléfilm est un film spécialement conçu pour passer à la télévision plutôt qu’au cinéma, et une série est un enchaînement de plusieurs épisodes, souvent regroupés en <strong>saisons</strong>.
+                </p>    
+            </section>
+            <section>
+                <p>Jusqu’à maintenant, le type de l'œuvre est enregistré dans l’attribut   typeDeTournage </p>
+                <p>Cependant, cet attribut ne sera utilisé que si l'œuvre est une série. Il restera vide si l'œuvre est un téléfilm ou un long-métrage. Cette solution n’est donc pas optimale. L’idéal serait de placer cet attribut dans une classe   Serie  .</p>
+                <p> On fait cela via la notion <strong>d’héritage</strong>, comme ceci :</p>
+                <img src="../dist/img/16343605932924_image58.png" height="300px">
+            </section>
+            <section>
+                <p>La relation d’héritage se représente par une flèche triangulaire blanche (vide). Elle indique que la classeOeuvre(appelée classe <strong>mère</strong>) est plus <strong>générale</strong> que ses classes <strong>filles</strong>, qui sont plus <strong>spécialisées</strong>.</p>
+                <p>Ainsi, toutes les classes filles (Telefilm, Serie et LongMetrage) héritent deOeuvre, et cette dernière transmet automatiquement à ses filles ses attributs et ses méthodes. De cette manière, toutes les classes filles possèdent l’attribut Titre. La classe Serie a quant à elle deux attributs :Titre et Saison.</p>
+                <p class="info">
+                    <i class="fa-solid fa-circle-info blanc"></i>
+                    Sur ce schéma, les classes Telefilm et LongMetrage sont vides. Ce n’est pas grave ! Mais si vous aviez eu plus d’informations dans le fichier, vous auriez pu ajouter, par exemple, un attribut chaine pour indiquer la chaîne de télévision sur laquelle est diffusée le Telefilm.
+                </p>
+            </section>
+            <section>
+                <p>on peut aussi enchaîner les relations d’héritage, en créant les classesSerieTV et SerieWeb</p>
+                <img src="../dist/img/1634360867506_image3.png">
+            </section>
+            <section>
+                <strong>
+                    Restreignez l’instanciation des classes grâce aux classes abstraites
+                </strong>
+                <p>
+                    Lorsque l’on utilise l’héritage, il est parfois utile de spécifier qu’une classe est abstraite, c’est-à-dire qu’elle ne peut <strong>pas être instanciée</strong>.
+                </p>
+                <p>
+                    C’est votre cas : dans la BDD, vous voulez qu’une œuvre soit obligatoirement un téléfilm, une série TV, une série web ou un long-métrage. La notion d'œuvre est trop générale pour que vous l’acceptiez. En effet, considérer un téléfilm simplement comme une oeuvre, c’est perdre les informations spécifiques au téléfilm.
+                </p>
+                <p>Bref, on veut qu’aucune œuvre soit enregistrée dans la BDD sans préciser si c’est un téléfilm, une série ou un long métrage.</p>
+            </section>
+            <section>
+                <p>Pour indiquer une classe abstraite, il suffit de mettre son titre en italique. Voici donc ce que cela donne si vous définissez Oeuvre et Serie comme abstraites :</p>
+                <img src="../dist/img/16343614257334_image59.png" height="300vh">
+                <p class="warning">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Une classe abstraite est toujours héritée. Elle peut d’ailleurs être héritée par d'autres classes abstraites, mais en fin de chaîne, il <strong>doit</strong> y avoir une classe non abstraite.
+                    </p>
+            </section>
+            <section>
+                <strong>Découvrez d’autres possibilités offertes par l’UML</strong>
+                <h4>L'agrégation</h4>
+                <p>’agrégation s’utilise lorsqu’une classe est un ensemble ou un regroupement d'objets. Elle est très similaire à une <strong>association classique</strong>, et que vous l'utilisiez ou non, cela n’aura aucune implication lors de la traduction du MCD vers le MLD.</p>
+                <p>Elle se représente comme ceci, avec un losange blanc (vide) :</p>
+                <img src="../dist/img/16343615248181_image13.png">
+                <p>Contrairement à la composition, il n’y a pas de contrainte sur les multiplicités, ni sur le cycle de vie des objets agrégés (ils peuvent exister même lorsque l’objet agrégeant disparaît).</p>
+            </section>
+            <section>
+                <h4>L’association ternaire</h4>
+                <p>Il est possible de créer des associations entre plus que 2 classes. Ce sont les associations N-aires. Voici un exemple d’association ternaire :</p>
+                <img src="../dist/img/16343616940205_image75.png">
+            </section>
+            <section>
+                <P>En pratique, on n’utilise jamais d’association de degré supérieur à trois. De plus, les associations ternaires peuvent toujours être transformées en trois associations binaires, en transformant l’association en une nouvelle classe, comme ceci : </P>
+                <img src="../dist/img/16343618266306_image16.png">
+                <p class="warning">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Il est conseillé de ne pas abuser des associations ternaires, car elles sont souvent moins intelligibles.
+                    </p>
+            </section>
+            <section>
+                <h4>Les notes</h4>
+                <p>l est possible d’ajouter des notes au diagramme de classes. Elles servent à apporter tout type de précisions. Notamment les contraintes sur certains attributs.</p>
+                <p>Sur votre diagramme, vous auriez pu poser la contrainte que l’attribut dateDeDebut doit être une date antérieure à dateDeFin. Eh oui, cela paraît logique, mais il faudra le spécifier à votre SGBDR car il ne le fera pas automatiquement !</p>
+                <img src="../dist/img/16343619959232_image23.png">
+                <p>Les notes servent aussi à préciser les domaines des attributs quand ceux-ci sont plus complexes que Entier, Date, Texte, etc.</p>
+            </section>
+            <section>
+                <h4>
+                    Les doubles associations
+                </h4>
+                <p>Deux classes peuvent être liées entre elles via deux (ou plus) associations.</p>
+                <p>Ce serait le cas lorsqu’une personne écrit un livre, et lorsqu’une autre personne traduit ce livre dans une autre langue :</p>
+                <img src="../dist/img/16343621963265_image69.png">
+                <p class="warning">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Dans ce cas, il est nécessaire de donner un nom aux associations pour les différencier.
+                    </p>
+            </section>
+            <section>
+                <h4>
+                    Les rôles de classes
+                </h4>
+                <p>
+                    Plutôt que de donner un nom aux associations, vous pouvez aussi caractériser une association par le rôle que tient chacune des deux classes. C’est le cas dans cet exemple, où on peut remplacer le nom de l’association « conduit » par « conducteur » et « moyen de locomotion » :
+                </p>
+                <img src="../dist/img/16343623263452_image1.png">
+                <p class="info">
+                    <i class="fa-solid fa-circle-info blanc"></i>
+                    C’est à vous de choisir si vous trouvez cette manière plus simple à comprendre. Si vous indiquez les rôles, pas besoin d’utiliser de verbes.
+                    </p>
+            </section>
+      </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
